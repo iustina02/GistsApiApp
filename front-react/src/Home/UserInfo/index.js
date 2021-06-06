@@ -1,18 +1,30 @@
 import React from 'react';
 import styles from "./UserInfo.module.scss";
+import PropTypes from 'prop-types';
 
-const UserInfo = ()=> {
+/**
+ * Component that display user info
+ */
+
+const UserInfo = ({userInfo})=> {
 
   return (
     /* gists user info result component */
     <div className={styles.userInfo}>
-      {/* TODO:  add link to user git account */}
-      <img className={styles.avatarResult} alt="userAvatar" src="https://avatars.githubusercontent.com/u/302680?v=4"/>
-      <div className={styles.usernameResult}>
-        Username
-      </div>
+      {/* TODO:  check link to user git account */}
+      {Object.keys(userInfo).length ? 
+      (<>
+      <img className={styles.avatarResult} alt="userAvatar" src={userInfo.avatar}/>
+      <a className={styles.usernameResult} href={userInfo.accountUrl}>
+        {userInfo.name}
+      </a>
+      </>): (<></>)}
     </div>
   );
 }
+
+UserInfo.propTypes = {
+  userInfo: PropTypes.object
+};
 
 export default UserInfo;

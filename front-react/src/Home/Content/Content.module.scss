@@ -9,7 +9,7 @@
       margin-bottom: 25px;
     }
     .tableHeader {
-      background-color: #95A5A6;
+      background-color: #dbca92;
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 0.03em;
@@ -18,6 +18,7 @@
       background-color: #ffffff;
       box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
     }
+    
     .col1 {
       flex-basis:25%;
     }
@@ -38,12 +39,20 @@
     }
 
     .fileBagde{
-      width: 20px;
+      width: 18px;  
+      height: 18px;
       margin-right: 5px;
     }
 
     .tabelList{
       display: flex ;
+      margin-bottom: 5px;
+      margin-left: 5px;
+    }
+
+    .userUrl{
+      text-decoration: none;
+      color:black;
     }
     
     @media all and (max-width: 810px) {
